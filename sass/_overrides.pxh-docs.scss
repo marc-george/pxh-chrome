@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #overrides.pxh-docs
+\*------------------------------------*/
+
+.pxh-docs {
+  margin: $pxh-base-spacing-unit / 3;
+  padding: $pxh-base-spacing-unit + ($pxh-base-spacing-unit / 3);
+  background-color: $pxh-docs-bg-color;
+
+  code {
+    font-size: $pxh-base-font-size;
+    background-color: $pxh-docs-code-bg-color;
+    color: $pxh-docs-code-text-color;
+  }
+  pre {
+    overflow-x: auto;
+  }
+}

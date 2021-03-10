@@ -1,0 +1,291 @@
+/*------------------------------------*\
+    #components.pxh-drawer
+\*------------------------------------*/
+
+@keyframes pxh-drawer--animate-in {
+  0% {
+    #{$pxh-drawer-side}: -$pxh-drawer-width-wide - ($pxh-drawer-margin / 2);
+  }
+  85% {
+    #{$pxh-drawer-side}: 0;
+  }
+  100% {
+    #{$pxh-drawer-side}: 0;
+  }
+}
+
+@keyframes pxh-drawer--animate-out {
+  0% {
+    #{$pxh-drawer-side}: 0;
+  }
+  85% {
+    #{$pxh-drawer-side}: -$pxh-drawer-width-wide - ($pxh-drawer-margin / 2);
+  }
+  100% {
+    #{$pxh-drawer-side}: -$pxh-drawer-width-wide - ($pxh-drawer-margin / 2);
+  }
+}
+
+@keyframes pxh-drawer--animate-wide {
+  0% {
+    width: $pxh-drawer-width-narrow;
+  }
+  33% {
+    width: $pxh-drawer-width-wide;
+  }
+  100% {
+    width: $pxh-drawer-width-wide;
+  }
+}
+
+@keyframes pxh-drawer--animate-out-wide {
+  0% {
+    #{$pxh-drawer-side}: 0;
+    // transform: translateX(0);
+    width: $pxh-drawer-width-narrow;
+  }
+  33% {
+    // transform: translateX(-$pxh-drawer-width-wide);
+    #{$pxh-drawer-side}: -$pxh-drawer-width-wide - ($pxh-drawer-margin / 2);
+    width: $pxh-drawer-width-narrow;
+  }
+  66% {
+    // transform: translateX(-$pxh-drawer-width-wide);
+    #{$pxh-drawer-side}: -$pxh-drawer-width-wide - ($pxh-drawer-margin / 2);
+    width: $pxh-drawer-width-wide;
+  }
+  100% {
+    // transform: translateX(-$pxh-drawer-width-wide);
+    #{$pxh-drawer-side}: -$pxh-drawer-width-wide;
+    width: $pxh-drawer-width-wide;
+  }
+}
+
+@keyframes pxh-drawer--animate-narrow {
+  0% {
+    width: $pxh-drawer-width-wide;
+  }
+  33% {
+    width: $pxh-drawer-width-wide;
+  }
+  66% {
+    width: $pxh-drawer-width-narrow;
+  }
+  100% {
+    width: $pxh-drawer-width-narrow;
+  }
+}
+
+// Set the default styles for the wide/open state of the drawer (as seen on mobile).
+.pxh-drawer {
+  z-index: 750;
+  position: fixed;
+  top: 0;
+  #{$pxh-drawer-side}: 0;
+  width: $pxh-drawer-width-wide;
+  height: 100%;
+  // disabled until we figure out how to add a border without reducing the logo width
+  // border-style: solid;
+  // border-width: $pxh-drawer-border-width;
+  // border-color: $pxh-drawer-border-color;
+  background-color: $pxh-drawer-bg-color;
+  box-shadow: $pxh-drawer-box-shadow;
+
+  &--image {
+    // We don't need this class yet but we anticipate other people needing it in the future
+  }
+
+  &--animate-in {
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 250ms;
+    animation-name: pxh-drawer--animate-in;
+  }
+  
+  &--animate-out {
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 250ms;
+    animation-name: pxh-drawer--animate-out;
+  }
+
+  &--animate-narrow {
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1000ms;
+    animation-name: pxh-drawer--animate-narrow;
+  }
+
+  &--animate-wide {
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+    animation-name: pxh-drawer--animate-wide;
+  }
+
+  &--animate-out-wide {
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1000ms;
+    animation-name: pxh-drawer--animate-out-wide;
+  }
+
+  // Keep the inactive drawer hidden off-screen until the @md (tablet) breakpoint.
+  @include mq($until: md) {
+    &--hidden-until\@md {
+      #{$pxh-drawer-side}: -$pxh-drawer-width-wide - ($pxh-drawer-margin / 2);
+    }
+  }
+
+  // From the @md (tablet) breakpoint and wider,
+  // the inactive drawer is displayed in its narrow state.
+  // Remove this class to display the drawer in its wide state.
+  @include mq($from: md) {
+    &--narrow\@md {
+      width: $pxh-drawer-width-narrow;
+    }
+  }
+
+  @include mq($from: lg) {
+    &--wide\@lg {
+      width: $pxh-drawer-width-wide;
+    }
+  }
+}
+
+.pxh-drawer-toggle {
+  float: $pxh-drawer-side;
+
+  &__link {
+    display: block;
+    float: $pxh-drawer-side;
+    width: $pxh-drawer-margin * 3;
+    height: $pxh-drawer-margin * 3;
+    padding: $pxh-drawer-margin;
+    color: $pxh-drawer-toggle-icon-color;
+    &:link,
+    &:visited {
+      color: $pxh-drawer-toggle-icon-color;
+    }
+  }
+
+  &__icon {
+    fill: $pxh-drawer-toggle-icon-color;
+  }
+}
+
+/*------------------------------------*\
+    #pxh-drawer-header
+\*------------------------------------*/
+
+@mixin pxh-drawer-header__link--in-state-opacity {
+  @include in-state-opacity;
+}
+
+@mixin pxh-drawer-header__link--in-state-scale {
+  padding-top: $pxh-drawer-margin;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: $pxh-drawer-width-wide - ($pxh-drawer-margin * 3) - 1px;
+  font-size: $pxh-drawer-header-link-font-size;
+}
+
+@mixin pxh-drawer-header__link--in-state {
+  @include pxh-drawer-header__link--in-state-scale;
+  @include pxh-drawer-header__link--in-state-opacity;
+}
+
+@keyframes pxh-drawer-header__link--animate-in {
+  0% {
+    @include out-state;
+  }
+  33% {
+    @include pxh-drawer-header__link--in-state-scale;
+    @include out-state-opacity;
+  }
+  100% {
+    @include pxh-drawer-header__link--in-state;
+  }
+}
+
+@keyframes pxh-drawer-header__link--animate-out {
+  0% {
+    @include pxh-drawer-header__link--in-state;
+  }
+  33% {
+    @include out-state-opacity;
+    @include pxh-drawer-header__link--in-state-scale;
+  }
+  34% {
+    @include out-state-opacity;
+    @include pxh-drawer-header__link--in-state-scale;
+  }
+  100% {
+    @include out-state;
+  }
+}
+
+.pxh-drawer-header {
+  float: $pxh-drawer-side;
+  text-align: $pxh-drawer-side;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+
+  &__link {
+    @include pxh-drawer-header__link--in-state;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &--animate-in {
+      animation-fill-mode: forwards;
+      animation-duration: 1000ms;
+      animation-name: pxh-drawer-header__link--animate-in;
+    }
+
+    &--animate-out {
+      animation-fill-mode: forwards;
+      animation-duration: 1000ms;
+      animation-name: pxh-drawer-header__link--animate-out;
+    }
+
+    &--image {
+      display: block;
+      background-image: $pxh-drawer-header-image;
+      background-repeat: no-repeat;
+      background-position: #{$pxh-drawer-side} center;
+      background-size: contain;
+      height: $pxh-drawer-margin * 3;
+      width: $pxh-drawer-width-wide - ($pxh-drawer-margin * 3);
+      text-indent: -9999px;
+      font-size: 1px;
+    }
+
+    @include mq($from: md) {
+      &--narrow\@md {
+        @include out-state;
+      }
+    }
+
+    @include mq($from: md) {
+      &--wide\@md {
+        @include pxh-drawer-header__link--in-state;
+      }
+    }
+
+    @include mq($from: lg) {
+      &--wide\@lg {
+        @include pxh-drawer-header__link--in-state;
+      }
+    }
+  }
+}
+
+// chain to override px-theme
+.pxh-drawer-header__link {
+  @include pxh-override-px-theme-text-color('pxh-drawer-header__link');
+} 

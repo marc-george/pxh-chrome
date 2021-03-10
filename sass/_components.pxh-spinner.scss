@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    #components.pxh-spinner
+\*------------------------------------*/
+
+.pxh-spinner {
+  text-align: center;
+  overflow: hidden;
+  &, &--margin {
+    margin: ($pxh-base-spacing-unit * 4) 0 ($pxh-base-spacing-unit * 4) 0;
+
+  }
+  &--no-margin {
+    margin: 0;
+  }
+  &::after {
+    content: ' ';
+    display: inline-block;
+    font-size: 1px;
+    position: relative;
+    text-indent: -9999em;
+    border-width: 4px;
+    border-style: solid;
+    border-color: $pxh-spinner-base-color;
+    border-left-color: $pxh-spinner-accent-color;
+    transform: translateZ(0);
+    animation: pxh-spinner 1.7s infinite linear;
+    border-radius: 50%;
+    width: ($pxh-base-spacing-unit * 2) + (($pxh-base-spacing-unit / 3) * 2);
+    height: ($pxh-base-spacing-unit * 2) + (($pxh-base-spacing-unit / 3) * 2);
+  }
+  &--small::after {
+    animation-duration: 1.6s;
+    border-width: 2px;
+    height: $pxh-base-spacing-unit + ($pxh-base-spacing-unit / 3);
+    width: $pxh-base-spacing-unit + ($pxh-base-spacing-unit / 3);
+  }
+  &--large::after {
+    animation-duration: 1.8s;
+    border-width: 6px;
+    height: $pxh-base-spacing-unit * 4;
+    width: $pxh-base-spacing-unit * 4;
+  }
+  &--inverted::after {
+    border-color: $pxh-spinner-base-color-inverted;
+    border-left-color: $pxh-spinner-accent-color-inverted;
+  }
+  &--finished::after {
+    display: none;
+  }
+}
+
+@keyframes pxh-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

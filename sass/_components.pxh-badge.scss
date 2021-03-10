@@ -1,0 +1,114 @@
+/*------------------------------------*\
+    #components.pxh-badge
+\*------------------------------------*/
+
+@mixin pxh-badge--in-state-scale {
+  padding: 2px 4px 0px 4px;
+  font-size: $pxh-badge-font-size;
+}
+
+@mixin pxh-badge--in-state-opacity {
+  @include in-state-opacity;
+}
+
+@mixin pxh-badge--in-state {
+  @include pxh-badge--in-state-opacity;
+  @include pxh-badge--in-state-scale;
+}
+
+@mixin pxh-badge--out-state-opacity {
+  @include out-state-opacity;
+}
+
+@mixin pxh-badge--out-state-scale {
+  @include out-state-scale;
+  border: 0;
+}
+
+@mixin pxh-badge--out-state {
+  @include pxh-badge--out-state-opacity;
+  @include pxh-badge--out-state-scale;
+}
+
+// no keyframes because we're not using animation classes yet
+
+.pxh-badge {
+  @include pxh-badge--in-state;
+  text-align: center;
+  background-color: $pxh-badge-bg-color;
+  display: inline-block;
+  font-weight: normal;
+  color: $pxh-badge-text-color;
+  line-height: 1;
+  border-style: solid;
+  border-width: $pxh-badge-border-width;
+  border-color: $pxh-badge-border-color;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 250ms ease-in-out;
+  transition-delay: 250ms;
+
+  &--navigation {
+    background-color: $pxh-badge-bg-color-navigation;
+    border-color: $pxh-badge-border-color-navigation;
+  }
+
+  &--primary {
+    background-color: $pxh-badge-bg-color-primary;
+    border-color: $pxh-badge-border-color-primary;
+  }
+
+  &--important {
+    background-color: $pxh-badge-bg-color-important;
+    border-color: $pxh-badge-border-color-important;
+  }
+
+  &--warning {
+    background-color: $pxh-badge-bg-color-warning;
+    border-color: $pxh-badge-border-color-warning;
+  }
+
+  &--error {
+    background-color: $pxh-badge-bg-color-error;
+    border-color: $pxh-badge-border-color-error;
+  }
+
+  &--info {
+    background-color: $pxh-badge-bg-color-info;
+    border-color: $pxh-badge-border-color-info;
+  }
+
+  &--healthy-black {
+    background-color: $pxh-badge-bg-color-healthy-black;
+    border-color: $pxh-badge-border-color-healthy-black;
+  }
+
+  &--healthy-white {
+    background-color: $pxh-badge-bg-color-healthy-white;
+    border-color: $pxh-badge-border-color-healthy-white;
+    color: $pxh-badge-text-color-inverse;
+  }
+
+  &--truncated {
+    max-width: $pxh-base-spacing-unit * 3;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &--hidden {
+    @include pxh-badge--out-state;
+  }
+
+  @include mq($from: lg) {
+    &--visible\@lg {
+      @include pxh-badge--in-state;
+    }
+  }
+
+  @include mq($from: md) {
+    &--hidden\@md {
+      @include pxh-badge--out-state;
+    }
+  }
+}

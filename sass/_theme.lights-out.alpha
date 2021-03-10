@@ -1,0 +1,609 @@
+/*------------------------------------*\
+    #settings.theme-lights-out
+\*------------------------------------*/
+
+/// Define whether the drawer should appear on the left or right side of the browser window
+/// @group pxh-settings
+/// @type String
+$pxh-drawer-side: null !default;
+
+/// Define the side of the browser window opposite the drawer (e.g. 'right' if the drawer should appear on the left)
+/// @group pxh-settings
+/// @type String
+$pxh-drawer-opposite-side: null !default;
+
+@if $pxh-language-direction == 'rtl' {
+  $pxh-drawer-side: right !default;
+  $pxh-drawer-opposite-side: left !default;
+} @else {
+  $pxh-drawer-side: left !default;
+  $pxh-drawer-opposite-side: right !default;
+}
+
+
+
+
+/// Path to GE web fonts
+/// @group pxh-settings
+/// @type String [default] - Webfont path
+$webfont-path: '//dzlpbrbc7yvq0.cloudfront.net/px/fonts/1.0.0' !default;
+
+$webfont-name: 'GE Inspira Sans' !default;
+
+$webfont-file-name-regular: GEInspiraSans-Regular-v01 !default;
+$webfont-file-name-bold: GEInspiraSans-Bold-v01 !default;
+$webfont-file-name-italic: GEInspiraSans-Italic-v01 !default;
+$webfont-file-name-bold-italic: GEInspiraSans-BoldItalic-v01 !default;
+
+
+
+
+/// List of media query breakpoints
+/// @group pxh-settings
+$mq-breakpoints: (
+  md:  768px,
+  lg: 1024px,
+) !default;
+
+
+
+
+/// Path to Font Awesome fonts
+/// @group pxh-settings
+/// @type String
+$fa-font-path: '//dzlpbrbc7yvq0.cloudfront.net/libs/font-awesome/4.7.0/fonts' !default;
+
+
+
+
+// <html> and <body> elements
+
+$pxh-base-bg-color: $d-gray19 !default;
+
+$pxh-base-text-color: $d-gray4 !default;
+
+$pxh-base-font-family: 'GE Inspira Sans', 'Helvetica', 'Arial', sans-serif !default;
+
+
+
+
+// <hr> element
+
+$pxh-hr-color: $d-gray6 !default;
+
+
+
+
+// <a> element
+
+$pxh-link-text-color: $d-primary-blue !default;
+
+$pxh-link-text-color-hover: $pxh-link-text-color !default;
+
+
+
+
+/// @group pxh-badge
+$pxh-badge-text-color:                  $d-white !default;
+$pxh-badge-text-color-inverse:          $d-black !default;
+$pxh-badge-bg-color:                    $d-gray5 !default;
+$pxh-badge-border-color:                $d-gray5 !default;
+$pxh-badge-border-width:                1px !default;
+
+$pxh-badge-bg-color-navigation:         $d-select-blue-pressed !default;
+$pxh-badge-border-color-navigation:     $d-select-blue-pressed !default;
+
+$pxh-badge-bg-color-primary:            $d-primary-blue !default;
+$pxh-badge-border-color-primary:        $d-primary-blue !default;
+
+$pxh-badge-bg-color-important:          $d-alert-red !default;
+$pxh-badge-border-color-important:      $d-alert-red !default;
+
+$pxh-badge-bg-color-warning:            $d-alert-orange !default;
+$pxh-badge-border-color-warning:        $d-alert-orange !default;
+
+$pxh-badge-bg-color-error:              $d-alert-yellow !default;
+$pxh-badge-border-color-error:          $d-alert-yellow !default;
+
+$pxh-badge-bg-color-info:               $d-alert-blue !default;
+$pxh-badge-border-color-info:           $d-alert-blue !default;
+
+$pxh-badge-bg-color-healthy-black:      $d-black !default;
+$pxh-badge-border-color-healthy-black:  $d-black !default;
+
+$pxh-badge-bg-color-healthy-white:      $d-white !default;
+$pxh-badge-border-color-healthy-white:  $d-gray5 !default;
+
+$pxh-badge-font-size: $pxh-base-font-size * 0.866666666666666 !default;
+
+
+
+
+/// @group pxh-drawer
+$pxh-drawer-bg-color: $d-gray20 !default;
+
+$pxh-drawer-toggle-icon-color: $d-gray12 !default;
+
+$pxh-drawer-header-image: url('../img/logo.png') !default;
+
+/// Disabled until we figure out how to add a border without reducing the logo width
+/// $pxh-drawer-border-color: transparent !default;
+
+/// Disabled until we figure out how to add a border without reducing the logo width
+/// $pxh-drawer-border-width: 0 !default;
+
+$pxh-drawer-box-shadow: none !default;
+
+/// Width of drawer in wide state
+/// @group pxh-drawer
+/// @type Number
+$pxh-drawer-width-wide: ($pxh-base-spacing-unit * 17) + ($pxh-base-spacing-unit / 3) !default;
+
+/// Width of drawer in narrow state
+/// @group pxh-drawer
+/// @type Number
+$pxh-drawer-width-narrow: $pxh-base-spacing-unit * 4 !default;
+/// Drawer margin
+/// @group pxh-drawer
+/// @type Number
+$pxh-drawer-margin: $pxh-base-spacing-unit + ($pxh-base-spacing-unit / 3) !default;
+
+$pxh-drawer-header-link-font-size: $pxh-base-font-size * 1.266666666666666 !default;
+
+
+
+
+/// @group pxh-error
+
+/// Icon color for error messages
+/// @group pxh-error
+/// @type Color
+$pxh-error-icon-color: $d-gray5 !default;
+
+/// Title/header text color for error messages
+/// @group pxh-error
+/// @type Color
+$pxh-error-title-text-color: $d-gray6 !default;
+
+/// Description text color for error messages
+/// @group pxh-error
+/// @type Color
+$pxh-error-description-text-color: $d-gray6 !default;
+
+/// Top margin to offset error message from top of browser window
+/// @group pxh-error
+/// @type Number
+$pxh-error-margin-top: $pxh-base-spacing-unit * 3 !default;
+
+/// Top padding to give error message some breathing room
+/// @group pxh-error
+/// @type Number
+$pxh-error-padding-top: $pxh-base-spacing-unit !default;
+
+/// Text decoration for hyperlinks in error messages
+/// @group pxh-error
+/// @type String
+$pxh-error-link-text-decoration: none !default;
+
+$pxh-error-icon-font-size: $pxh-base-font-size * 4 !default;
+
+$pxh-error-title-font-size: $pxh-base-font-size * 1.333333333333333 !default;
+
+$pxh-error-description-font-size: $pxh-base-font-size !default;
+
+
+
+
+/// @group pxh-login
+$pxh-login-border-color: rgba(0, 0, 0, 0.15) !default;
+$pxh-login-border-width: 1px 0 0 0 !default;
+
+$pxh-login-avatar-icon-color: $d-gray7 !default;
+$pxh-login-avatar-icon-border-color: $d-gray7 !default;
+$pxh-login-avatar-icon-border-width: 1px !default;
+
+$pxh-login-settings-link-text-color: $d-gray12 !default;
+$pxh-login-settings-link-text-color-hover: $d-white !default;
+
+$pxh-login-menu-text-color: $d-white !default;
+$pxh-login-menu-bg-color: $d-black !default;
+$pxh-login-menu-border-width: 1px !default;
+$pxh-login-menu-border-color: $d-gray9 !default;
+$pxh-login-menu-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25) !default;
+
+$pxh-login-menu-divider-border-width: 1px 0 0 0 !default;
+$pxh-login-menu-divider-border-color: $d-gray10 !default;
+
+$pxh-login-menu-link-text-color: $d-white !default;
+$pxh-login-menu-link-text-color-hover: $d-white !default;
+$pxh-login-menu-link-bg-color: transparent !default;
+$pxh-login-menu-link-bg-color-hover: $d-gray10 !default;
+
+$pxh-login-notifications-link-text-color: $d-gray7 !default;
+$pxh-login-notifications-link-text-color-hover: $d-white !default;
+
+$pxh-login-notifications-badge-text-color: $d-white !default;
+$pxh-login-notifications-badge-text-color-hover: $d-white !default;
+
+$pxh-login-notifications-badge-bg-color: $d-gray5 !default;
+$pxh-login-notifications-badge-bg-color-green: $d-alert-green !default;
+$pxh-login-notifications-badge-bg-color-blue: $d-alert-blue !default;
+$pxh-login-notifications-badge-bg-color-orange: $d-alert-orange !default;
+$pxh-login-notifications-badge-bg-color-red: $d-alert-red !default;
+
+$pxh-login-font-size: $pxh-base-font-size !default;
+
+$pxh-login-notifications-badge-font-size: $pxh-base-font-size * 0.8 !default;
+
+$pxh-login-avatar-icon-font-size: $pxh-base-font-size * 1.133333333333333 !default;
+
+/// Login component height
+/// @group pxhtheme-login
+/// @type Number
+$pxh-login-height:  $pxh-base-spacing-unit * 4 !default;
+
+/// User avatar height and width
+/// @group pxhtheme-login
+/// @type Number
+$pxh-login-avatar-height-width: $pxh-base-spacing-unit * 2 !default;
+
+/// "Magic number" centering for login components
+/// @group pxhtheme-login
+/// @type Number
+$pxh-login-magic-centering: $pxh-base-spacing-unit - 1px !default;
+
+
+
+
+/// @group pxh-navigation
+$pxh-navigation-border-width: 1px 0 0 0 !default;
+$pxh-navigation-border-color: rgba(0, 0, 0, 0.15) !default;
+
+$pxh-navigation-item-icon-color: $d-gray12 !default;
+$pxh-navigation-item-icon-color-hover: $d-gray4 !default;
+$pxh-navigation-item-icon-color-selected: $d-white !default;
+$pxh-navigation-item-icon-color-active: $d-white !default;
+
+/// Navigation color for error icon
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-item-icon-color-error: $d-alert-red !default;
+
+/// Navigation link font color
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-link-text-color: $d-gray12 !default;
+
+/// Navigation text color on hover
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-link-text-color-hover: $d-gray4 !default;
+
+/// Navigation text color for selected item
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-link-text-color-selected: $d-white !default;
+
+/// Navigation text color for active item
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-link-text-color-active: $d-white !default;
+
+$pxh-navigation-link-text-color-error: $d-gray7 !default;
+
+/// Navigation link background color
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-link-bg-color: transparent !default;
+
+/// Navigation background color on hover
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-link-bg-color-hover: $d-gray9 !default;
+
+/// Navigation background color for selected item
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-link-bg-color-selected: $d-gray9 !default;
+
+/// Navigation background color for active item
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-link-bg-color-active: $d-gray9 !default;
+
+$pxh-navigation-link-bg-color-error: transparent !default;
+
+/// Navigation text color for sub-item
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-sub-link-text-color: $d-gray12 !default;
+
+/// Navigation text color for sub-item on hover
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-sub-link-text-color-hover: $d-gray4 !default;
+
+/// Navigation text color for selected sub-item
+/// @group pxh-navigation
+/// @type Color
+$pxh-navigation-sub-link-text-color-selected: $d-white !default;
+
+$pxh-navigation-sub-link-bg-color: transparent !default;
+$pxh-navigation-sub-link-bg-color-hover: transparent !default;
+$pxh-navigation-sub-link-bg-color-selected: transparent !default;
+
+$pxh-navigation-sub-link-settings-text-color: $d-primary-blue !default;
+$pxh-navigation-sub-link-settings-text-color-selected: $d-primary-blue !default;
+$pxh-navigation-sub-link-settings-bg-color: transparent !default;
+$pxh-navigation-sub-link-settings-bg-color-hover: transparent !default;
+$pxh-navigation-sub-link-settings-bg-color-selected: transparent !default;
+
+$pxh-navigation-sub-item-divider-height: 1px !default;
+$pxh-navigation-sub-item-divider-color: $d-gray14; // used as bg color but that's an implementation detail
+
+/// Navigation item link height
+/// @group pxh-navigation
+/// @type Number
+$pxh-navigation-link-height: ($pxh-base-spacing-unit * 3) + 3px !default;
+
+/// Navigation sub-item link height
+/// @group pxh-navigation
+/// @type Number
+$pxh-navigation-sub-link-height: $pxh-base-spacing-unit * 2 !default;
+
+/// Navigation margin for divider component
+/// @group pxh-navigation
+/// @type Number
+$pxh-navigation-divider-margin: $pxh-base-spacing-unit - ($pxh-base-spacing-unit / 3) !default;
+
+$pxh-navigation-link-font-size: $pxh-base-font-size !default;
+
+$pxh-navigation-item-icon-error-font-size: $pxh-base-font-size * 1.266666666666666 !default;
+
+$pxh-navigation-item-text-font-size: $pxh-base-font-size * 1.066666666666666 !default;
+
+$pxh-navigation-sub-link-font-size: $pxh-base-font-size * 1.066666666666666 !default;
+
+
+
+
+/// @group pxh-notifications
+
+$pxh-notifications-text-color: $d-gray2 !default;
+
+$pxh-notifications-bg-color: $d-gray10 !default;
+
+$pxh-notifications-border-color: $d-gray7 !default;
+
+$pxh-notifications-border-width: 1px !default;
+
+$pxh-notifications-box-shadow: none !default;
+
+$pxh-notifications-header-border-width: 0 0 1px 0 !default;
+
+$pxh-notifications-header-border-color: $d-gray7 !default;
+
+$pxh-notifications-link-text-color: $d-gray5 !default;
+
+$pxh-notifications-link-text-color-hover: $d-primary-blue !default;
+
+$pxh-notifications-clear-text-color: $d-gray5 !default;
+
+$pxh-notifications-clear-text-color-hover: $d-primary-blue !default;
+
+$pxh-notifications-empty-text-color: $d-gray7 !default;
+
+
+
+
+/// @group pxh-notification
+
+$pxh-notification-border-color: $d-gray9 !default;
+
+$pxh-notification-border-width: 0 0 1px 0 !default;
+
+$pxh-notification-icon-color: transparent !default;
+$pxh-notification-icon-color-green: $d-alert-green !default;
+$pxh-notification-icon-color-blue: $d-alert-blue !default;
+$pxh-notification-icon-color-orange: $d-alert-orange !default;
+$pxh-notification-icon-color-red: $d-alert-red !default;
+
+$pxh-notification-link-text-color: $d-gray4 !default;
+
+$pxh-notification-link-text-color-hover: $d-primary-blue !default;
+
+$pxh-notification-more-button-text-color: $d-gray7 !default;
+
+$pxh-notification-more-button-text-color-hover: $d-gray4 !default;
+
+$pxh-notification-more-button-bg-color: $d-gray10 !default;
+
+$pxh-notification-more-button-bg-color-hover: $d-gray9 !default;
+
+$pxh-notification-dismiss-button-icon-color: $d-gray8 !default;
+
+$pxh-notification-dismiss-button-icon-color-hover: $d-primary-blue !default;
+
+/// Height of a (non-expanded) notification
+/// @group pxh-notification
+/// @type Number
+$pxh-notification-height: ($pxh-base-spacing-unit * 4) + (($pxh-base-spacing-unit / 3) * 2) !default;
+
+/// Default margin for notification components
+/// @group pxh-notification
+/// @type Number
+$pxh-notification-margin: ($pxh-base-spacing-unit / 3) !default;
+
+/// Maximum number of notifications to display at once
+/// @group pxh-notification
+/// @type Number
+$pxh-notification-max-count: 5 !default;
+
+$pxh-notification-font-size: $pxh-base-font-size * 1.066666666666666 !default;
+
+$pxh-notification-icon-font-size: $pxh-base-font-size * 1.6 !default;
+
+
+
+
+/// @group pxh-overlay
+$pxh-overlay-bg-color: rgba($d-black, 0.7) !default;
+
+
+
+
+/// @group pxh-spinner
+
+/// Alpha transparency for pxh-spinner
+/// @group pxh-spinner
+/// @type Number
+$pxh-spinner-alpha: 0.7 !default;
+
+$pxh-spinner-base-color: rgba($d-gray4, $pxh-spinner-alpha) !default;
+$pxh-spinner-accent-color: $d-primary-blue !default;
+
+$pxh-spinner-base-color-inverted: rgba($d-gray8, $pxh-spinner-alpha) !default;
+$pxh-spinner-accent-color-inverted: $pxh-spinner-accent-color !default;
+
+
+
+
+// pxh-toast
+
+$pxh-toast-text-color: $d-gray5 !default;
+
+$pxh-toast-bg-color: $d-gray10 !default;
+
+$pxh-toast-more-bg: linear-gradient(to bottom, rgba($d-gray10, 0) 0%, rgba($d-gray10, 1) 50%); // gradients are considered CSS images not colors hence bg and not bg-color
+
+$pxh-toast-more-button-text-color: $d-gray7 !default;
+
+$pxh-toast-more-button-text-color-hover: $d-gray4 !default;
+
+$pxh-toast-more-button-bg-color: $d-gray10 !default;
+
+$pxh-toast-more-button-bg-color-hover: $d-gray9 !default;
+
+$pxh-toast-more-button-border-color: $d-gray8 !default;
+
+$pxh-toast-more-button-border-width: 1px !default;
+
+$pxh-toast-button-text-color: $d-gray5 !default;
+
+$pxh-toast-button-text-color-hover: $d-gray9 !default;
+
+$pxh-toast-button-bg-color: $d-gray10 !default;
+
+$pxh-toast-button-bg-color-hover: $d-gray9 !default;
+
+$pxh-toast-button-border-color: $d-gray8 !default;
+
+$pxh-toast-button-border-width: 1px !default;
+
+$pxh-toast-timestamp-text-color: $d-gray8 !default;
+
+$pxh-toast-dismiss-button-icon-color: $d-gray7 !default;
+
+$pxh-toast-dismiss-button-icon-color-hover: $d-primary-blue !default;
+
+$pxh-toast-icon-color: $d-white !default;
+
+$pxh-toast-icon-bg-color: transparent !default;
+$pxh-toast-icon-bg-color-green: $d-alert-green !default;
+$pxh-toast-icon-bg-color-blue: $d-alert-blue !default;
+$pxh-toast-icon-bg-color-orange: $d-alert-orange !default;
+$pxh-toast-icon-bg-color-red: $d-alert-red !default;
+
+/// Height of a (non-expanded) toast
+/// @group pxh-toast
+/// @type Number
+$pxh-toast-height: $pxh-base-spacing-unit * 4 + (($pxh-base-spacing-unit / 3) * 2) !default;
+
+/// Default margin for toast components
+/// @group pxh-toast
+/// @type Number
+$pxh-toast-margin: $pxh-base-spacing-unit / 3 !default;
+
+/// Maximum number of toasts to display at once
+/// @group pxh-toast
+/// @type Number
+$pxh-toast-max-count: 3 !default;
+
+$pxh-toast-font-size: $pxh-base-font-size * 1.066666666666666 !default;
+
+$pxh-toast-more-button-font-size: $pxh-base-font-size * 0.933333333333333 !default;
+
+$pxh-toast-dismiss-font-size: $pxh-base-font-size * 1.2 !default;
+
+$pxh-toast-icon-font-size: $pxh-base-font-size * 1.866666666666666 !default;
+
+
+
+
+/// @group pxh-view
+
+$pxh-view-bg-color: $d-black !default;
+
+/// Options for pxh-view background colors
+/// @group pxh-view
+$pxh-view-bg-colors: (
+  white: $d-white, 
+  gray1: $d-gray1, 
+  gray2: $d-gray2, 
+  gray3: $d-gray3, 
+  gray4: $d-gray4, 
+  gray5: $d-gray5, 
+  gray6: $d-gray6, 
+  gray7: $d-gray7, 
+  gray8: $d-gray8, 
+  gray9: $d-gray9, 
+  gray10: $d-gray10, 
+  black: $d-black
+ ) !default;
+
+$pxh-view-header-bg-color: $d-gray17 !default;
+
+$pxh-view-header-border-color: rgba(255,255,255,0.2) !default;
+
+$pxh-view-header-border-width: 0 0 1px 0; // should allow all borders, but specify just the bottom to start
+
+$pxh-view-header-drawer-toggle-icon-color: $d-gray12 !default;
+
+$pxh-view-header-title-link-text-color: $d-gray4 !default;
+
+$pxh-view-header-title-font-size: $pxh-base-font-size * 1.466666666666666 !default;
+
+/// View header height
+/// locked to current height of px-context-browser + 1px for bottom border
+/// @group pxh-view
+/// @type Number
+$pxh-view-header-height: ($pxh-base-spacing-unit * 4) + 1px !default;
+
+
+
+
+// overrides.pxh-docs
+
+$pxh-docs-bg-color: $d-gray17 !default;
+$pxh-docs-code-font-size: $pxh-base-font-size !default;
+$pxh-docs-code-bg-color: transparent !default;
+$pxh-docs-code-text-color: $d-gray4 !default;
+
+
+
+
+// pxh-fancy-scrollbars
+
+$pxh-scrollbar-width: 7px !default;
+
+$pxh-scrollbar-base-color: $d-gray10 !default;
+$pxh-scrollbar-arrow-color: $d-gray8 !default;
+$pxh-scrollbar-track-color: $d-gray10 !default;
+$pxh-scrollbar-face-color:  $d-gray8 !default;
+
+$pxh-scrollbar-track-border-color: $d-gray10 !default;
+$pxh-scrollbar-track-border-width: 2px !default;
+
+$pxh-scrollbar-thumb-color: $d-gray7 !default;
+$pxh-scrollbar-thumb-border-color: $d-gray10 !default;
+$pxh-scrollbar-thumb-border-width: 0 2px 0 2px !default;

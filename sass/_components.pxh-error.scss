@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    #components.pxh-error
+\*------------------------------------*/
+
+.pxh-error {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: $pxh-error-margin-top 0 0 0;
+  padding: $pxh-error-padding-top $pxh-base-spacing-unit ($pxh-base-spacing-unit * 8) $pxh-base-spacing-unit;
+}
+
+@include mq($from: md) {
+  .pxh-error\@md {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+
+@include mq($from: lg) {
+  .pxh-error\@lg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+}
+
+.pxh-error__icon {
+  font-size: $pxh-error-icon-font-size;
+  color: $pxh-error-icon-color;
+  line-height: 1;
+}
+
+.pxh-error__title {
+  font-size: $pxh-error-title-font-size;
+  font-weight: bold;
+  color: $pxh-error-title-text-color;
+  a,
+  a:link {
+    text-decoration: $pxh-error-link-text-decoration;
+  }
+}
+
+.pxh-error__description {
+  font-size: $pxh-error-description-font-size;
+  color: $pxh-error-description-text-color;
+  a,
+  a:link {
+    text-decoration: $pxh-error-link-text-decoration;
+  }
+}

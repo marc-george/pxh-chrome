@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #overrides.pxh-utilities
+\*------------------------------------*/
+
+// utility class to disable scrolling
+@include mq($until: lg) {
+  .pxh-disable-scroll-until\@lg {
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+  }
+}
+
+.pxh-float-left {
+  float: left;
+}
+
+.pxh-float-right {
+  float: right;
+}
+
+.pxh-clear-left {
+  clear: left;
+}
+
+.pxh-clear-right {
+  clear: right;
+}
+
+.pxh-clear-both {
+  clear: both;
+}
+
+.pxh-display-none {
+  display: none;
+}
+
+.pxh-clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

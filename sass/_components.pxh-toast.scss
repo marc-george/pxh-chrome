@@ -1,0 +1,139 @@
+/*------------------------------------*\
+    #components.pxh-toast
+\*------------------------------------*/
+
+.pxh-toasts {
+  @include pxh-fancy-scrollbar;
+  position: fixed;
+  bottom: 0;
+  right: $pxh-toast-margin;
+  left: $pxh-toast-margin;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  z-index: 300;
+  max-height: ($pxh-toast-height * 2) + ($pxh-toast-height / 2) + $pxh-toast-margin;
+
+  @include mq($from: md) {
+    &--narrow\@md {
+      max-height: ($pxh-toast-height * $pxh-toast-max-count) + ($pxh-toast-height / 2) + ($pxh-toast-margin * ($pxh-toast-max-count - 1));
+      top: $pxh-view-header-height + ($pxh-base-spacing-unit / 3);
+      #{$pxh-drawer-side}: auto;
+      width: $pxh-base-spacing-unit * 28;
+      bottom: auto;
+    }
+  }
+
+  @include mq($from: lg) {
+    &--wide\@lg {
+      #{$pxh-drawer-side}: auto;
+      width: $pxh-base-spacing-unit * 32;
+    }
+  }
+}
+
+@keyframes pxh-toast--animate-in {
+  0% {
+    @include pxh-toast--out-state;
+  }
+  33% {
+    @include pxh-toast--in-state-scale;
+    @include out-state-opacity;
+  }
+  66% {
+    @include pxh-toast--in-state;
+  }
+  100% {
+    @include pxh-toast--in-state;
+  }
+}
+
+@keyframes pxh-toast--animate-out {
+  0% {
+    @include pxh-toast--in-state;
+  }
+  33% {
+    @include pxh-toast--in-state-scale;
+    @include out-state-opacity;
+  }
+  66% {
+    @include pxh-toast--out-state;
+  }
+  100% {
+    @include pxh-toast--out-state;
+  }
+}
+
+.pxh-toast {
+  @include pxh-toast--in-state;
+  @include pxh-toast;
+
+  &--animate-in {
+    animation-fill-mode: forwards;
+    animation-duration: 1000ms;
+    animation-name: pxh-toast--animate-in;
+  }
+
+  &--animate-out {
+    animation-fill-mode: forwards;
+    animation-duration: 1000ms;
+    animation-name: pxh-toast--animate-out;
+  }
+
+  &__action {
+    @include pxh-toast__action;
+  }
+
+  &__button {
+    max-width: $pxh-toast-height * 1.75;
+    @include pxh-toast__button;
+    @include pxh-override-px-theme-text-color('pxh-toast__button', $pxh-toast-button-text-color);
+    @include pxh-override-px-theme-bg-color('pxh-toast__button', $pxh-toast-button-bg-color, $pxh-toast-button-bg-color-hover);
+  }
+
+  &__icon {
+    @include pxh-toast__icon;
+    color: $pxh-toast-icon-color;
+    padding-top: $pxh-toast-margin * 4;
+    flex-basis: $pxh-toast-height;
+    font-size: $pxh-toast-icon-font-size;
+
+    &--green {
+      background-color: $pxh-toast-icon-bg-color-green;
+    }
+
+    &--blue {
+      background-color: $pxh-toast-icon-bg-color-blue;
+    }
+
+    &--orange {
+      background-color: $pxh-toast-icon-bg-color-orange;
+    }
+
+    &--red {
+      background-color: $pxh-toast-icon-bg-color-red;
+    }
+  }
+
+  &__text {
+    @include pxh-toast__text;
+  }
+
+  &__more {
+    @include pxh-toast__more;
+  }
+
+  &__more-button {
+    @include pxh-toast__more-button;
+    @include pxh-override-px-theme-text-color('pxh-toast__more-button', $pxh-toast-more-button-text-color, $pxh-toast-more-button-text-color-hover);
+    @include pxh-override-px-theme-bg-color('pxh-toast__more-button', $pxh-toast-more-button-bg-color, $pxh-toast-more-button-bg-color-hover);
+  }
+
+  &__dismiss {
+    @include pxh-toast__dismiss;
+  }
+
+  &__dismiss-button {
+    @include pxh-toast__dismiss-button;
+    @include pxh-override-px-theme-text-color('pxh-toast__dismiss-button', $pxh-toast-dismiss-button-icon-color, $pxh-toast-dismiss-button-icon-color-hover);
+  }
+}

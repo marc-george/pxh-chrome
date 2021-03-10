@@ -1,0 +1,65 @@
+/*! pxh-chrome.css 3.0.3 */
+
+/*------------------------------------*\
+    #pxh-chrome
+\*------------------------------------*/
+
+// ** #SETTINGS ** //
+
+// SORT ORDER IS IMPORTANT IN THIS LAYER //
+
+/// Define whether the application is rendering in a 'left-to-right' language or a 'right-to-left' language
+/// @group pxh-settings
+/// @type String [default] 'ltr'
+$pxh-language-direction: 'ltr'; // 'ltr' OR 'rtl'
+
+@import 'settings.spacing';
+@import 'settings.colors';
+
+// ** #THEME ** //
+
+/// The following string will be replaced with the user's theme variables:
+// ** THEME VARS GO HERE ** //
+
+@import 'theme.default';
+
+// ** #GENERIC ** //
+
+@import 'generic.normalize';
+@import 'generic.fonts';
+@import 'generic.defaults';
+
+// ** #TOOLS ** //
+
+@import '../bower_components/sass-mq/mq';
+@import '../bower_components/font-awesome/scss/font-awesome';
+@import 'tools.pxh-animations';
+@import 'tools.pxh-mixins';
+
+// ** #ELEMENTS ** //
+
+@import 'elements.body';
+@import 'elements.links';
+@import 'elements.hr';
+
+// ** #OBJECTS ** //
+
+// ** #COMPONENTS ** //
+
+@import 'components.pxh-badge';
+@import 'components.pxh-closer';
+@import 'components.pxh-drawer';
+@import 'components.pxh-error';
+@import 'components.pxh-login';
+@import 'components.pxh-navigation';
+@import 'components.pxh-notification';
+@import 'components.pxh-overlay';
+@import 'components.pxh-spinner';
+@import 'components.pxh-toast';
+@import 'components.pxh-view';
+
+// ** #OVERRIDES ** //
+
+@import 'overrides.px-theme';
+@import 'overrides.pxh-utilities';
+@import 'overrides.pxh-docs';

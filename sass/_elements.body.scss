@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #elements.body
+\*------------------------------------*/
+
+$pxh-language-direction : 'ltr' !default; // 'ltr' OR 'rtl'
+
+html {
+  font-size: ($pxh-base-font-size / 16px) * 1em;
+  line-height: $pxh-base-line-height / $pxh-base-font-size;
+  background-color: $pxh-base-bg-color;
+  color: $pxh-base-text-color;
+}
+
+html, body {
+  @if $pxh-language-direction == 'rtl' {
+    direction: rtl;
+  }
+  font-family: $pxh-base-font-family;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100%;
+}

@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #settings.theme-prechrome
+\*------------------------------------*/
+
+$pxh-base-bg-color: $gray10 !default;
+
+$pxh-base-text-color: $white !default;
+
+$pxh-link-text-decoration: none !default;
+
+
+
+
+/// @group pxh-error
+
+/// Icon color for error messages
+/// @group pxh-error
+/// @type Color
+$pxh-error-icon-color: $gray5 !default;
+
+/// Title/header text color for error messages
+/// @group pxh-error
+/// @type Color
+$pxh-error-title-color: $white !default;
+
+/// Description text color for error messages
+/// @group pxh-error
+/// @type Color
+$pxh-error-description-color: $white !default;
+
+/// Top margin to offset error message from top of browser window
+/// @group pxh-error
+/// @type Number
+$pxh-error-margin-top: $pxh-base-spacing-unit * 6 !default;
+
+/// Top padding to give error message some breathing room
+/// @group pxh-error
+/// @type Number
+$pxh-error-padding-top: $pxh-base-spacing-unit * 2 !default;
+
+/// Text decoration for hyperlinks in error messages
+/// @group pxh-error
+/// @type String
+$pxh-error-link-text-decoration: underline !default;

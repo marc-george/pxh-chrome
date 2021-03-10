@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    #tools.pxh-mixins
+\*------------------------------------*/
+
+@mixin pxh-fancy-scrollbar {
+  scrollbar-base-color: $pxh-scrollbar-base-color;
+  scrollbar-arrow-color: $pxh-scrollbar-arrow-color;
+  scrollbar-track-color: $pxh-scrollbar-track-color;
+  scrollbar-face-color: $pxh-scrollbar-face-color;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    width: $pxh-scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+      background-color: $pxh-scrollbar-track-color;
+      border: 2px solid $pxh-scrollbar-track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-style: solid;
+    border-width: $pxh-scrollbar-thumb-border-width;
+    border-color: $pxh-scrollbar-thumb-border-color;
+    background-color: $pxh-scrollbar-thumb-color;
+  }
+}
+
+@mixin pxh-override-px-theme-text-color($class-to-chain, $link-color: $pxh-navigation-link-text-color, $hover-color: $pxh-navigation-link-text-color-hover) {
+  // resigned to using !important instead of chained identical selectors because it takes so many darn nested selectors to override polymer's a:not([style-scope]):not(.style-scope):link
+  color: $link-color !important;
+
+  &:link {
+    color: $link-color !important;
+  }
+
+  &:visited {
+    color: $link-color !important;
+  }
+
+  &:hover {
+    color: $hover-color !important;
+  }
+
+  &:active {
+    color: $hover-color !important;
+  }
+}
+
+@mixin pxh-override-px-theme-bg-color($class-to-chain, $link-color: $pxh-link-text-color, $hover-color: $link-color) {
+  // resigned to using !important instead of chained identical selectors because it takes so many darn nested selectors to override polymer's a:not([style-scope]):not(.style-scope):link
+  background-color: $link-color !important;
+
+  &:link {
+    background-color: $link-color !important;
+  }
+
+  &:visited {
+    background-color: $link-color !important;
+  }
+
+  &:hover {
+    background-color: $hover-color !important;
+  }
+  
+  &:active {
+    background-color: $hover-color !important;
+  }
+}

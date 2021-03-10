@@ -1,0 +1,156 @@
+/*------------------------------------*\
+    #tools.pxh-animations
+\*------------------------------------*/
+
+@mixin in-state-opacity {
+  opacity: 1;
+}
+
+@mixin out-state-opacity {
+  opacity: 0;
+}
+
+@mixin out-state-scale {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+@mixin out-state {
+  @include out-state-scale;
+  @include out-state-opacity;
+}
+
+// mixin for embedding common animation declarations across pxh-navigation elements
+@mixin pxh-animation($name) {
+  animation-name: $name;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+$mega-animate-default-config: (
+  font-size-in: $pxh-base-font-size,
+  margin-in: 0,
+  padding-in: 0,
+  border-in: 0,
+  height-in: auto,
+  opacity-in: 1,
+  animation-name-in: animate-in,
+  font-size-out: 0,
+  margin-out: 0,
+  padding-out: 0,
+  border-out: 0,
+  height-out: auto,
+  opacity-out: 0,
+  animation-name-out: animate-out,
+  animation-duration: 500ms,
+  block-class: default
+);
+
+@mixin mega-keyframes($config: $mega-animate-default-config) {
+  @keyframes #{map-get($config, block-class)}--#{map-get($config, animation-name-in)} {
+    0% {
+      font-size: map-get($config, font-size-out);
+      margin: map-get($config, margin-out);
+      border: map-get($config, border-out);
+      padding: map-get($config, padding-out);
+      height: map-get($config, height-out);
+      opacity: map-get($config, opacity-out);
+    }
+    33% {
+      font-size: map-get($config, font-size-in);
+      margin: map-get($config, margin-in);
+      border: map-get($config, border-in);
+      padding: map-get($config, padding-in);
+      height: map-get($config, height-in);
+      opacity: map-get($config, opacity-out);
+    }
+    100% {
+      font-size: map-get($config, font-size-in);
+      margin: map-get($config, margin-in);
+      border: map-get($config, border-in);
+      padding: map-get($config, padding-in);
+      height: map-get($config, height-in);
+      opacity: map-get($config, opacity-in);
+    }
+  }
+
+  @keyframes #{map-get($config, block-class)}--#{map-get($config, animation-name-out)} {
+    0% {
+      font-size: map-get($config, font-size-in);
+      margin: map-get($config, margin-in);
+      border: map-get($config, border-in);
+      padding: map-get($config, padding-in);
+      height: map-get($config, height-in);
+      opacity: map-get($config, opacity-in);
+    }
+    66% {
+      font-size: map-get($config, font-size-in);
+      margin: map-get($config, margin-in);
+      border: map-get($config, border-in);
+      padding: map-get($config, padding-in);
+      height: map-get($config, height-in);
+      opacity: map-get($config, opacity-out);
+    }
+    100% {
+      font-size: map-get($config, font-size-out);
+      margin: map-get($config, margin-out);
+      border: map-get($config, border-out);
+      padding: map-get($config, padding-out);
+      height: map-get($config, height-out);
+      opacity: map-get($config, opacity-out);
+    }
+  }
+}
+
+@mixin mega-animate($config) {
+  font-size: map-get($config, font-size-in);
+  margin: map-get($config, margin-in);
+  border: map-get($config, border-in);
+  padding: map-get($config, padding-in);
+  height: map-get($config, height-in);
+  opacity: map-get($config, opacity-in);
+  &--animate-in {
+    font-size: map-get($config, font-size-in);
+    margin: map-get($config, margin-in);
+    border: map-get($config, border-in);
+    padding: map-get($config, padding-in);
+    height: map-get($config, height-in);
+    opacity: map-get($config, opacity-in);
+    animation-name: #{map-get($config, block-class)}--#{map-get($config, animation-name-in)};
+    animation-duration: map-get($config, animation-duration);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  &--animate-out {
+    font-size: map-get($config, font-size-out);
+    margin: map-get($config, margin-out);
+    border: map-get($config, border-out);
+    padding: map-get($config, padding-out);
+    height: map-get($config, height-out);
+    opacity: map-get($config, opacity-out);
+    animation-name: #{map-get($config, block-class)}--#{map-get($config, animation-name-out)};
+    animation-duration: map-get($config, animation-duration);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  &--hidden {
+    font-size: map-get($config, font-size-out);
+    margin: map-get($config, margin-out);
+    border: map-get($config, border-out);
+    padding: map-get($config, padding-out);
+    height: map-get($config, height-out);
+    opacity: map-get($config, opacity-out);
+  }
+  &--visible {
+    font-size: map-get($config, font-size-out);
+    margin: map-get($config, margin-out);
+    border: map-get($config, border-out);
+    padding: map-get($config, padding-out);
+    height: map-get($config, height-out);
+    opacity: map-get($config, opacity-out);
+  }
+}

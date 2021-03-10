@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #overrides.px-theme
+\*------------------------------------*/
+
+html {
+  // sets color as default for application background:
+  background-color: $pxh-base-bg-color !important;
+  // prevents duplicate scroll bars on the viewport in addition to the pxh-view content area in IE:
+  overflow: hidden !important;
+}
+
+body {
+  margin-bottom: 0 !important;
+}

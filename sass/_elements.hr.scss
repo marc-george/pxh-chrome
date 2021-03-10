@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #elements.hr
+\*------------------------------------*/
+
+hr {
+    height: 1px;
+    color: $pxh-hr-color;
+    background: $pxh-hr-color;
+    font-size: 0;
+    border: 0;
+    margin-top: $pxh-base-spacing-unit;
+    margin-bottom: $pxh-base-spacing-unit;
+}

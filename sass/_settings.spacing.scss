@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #settings.spacing
+\*------------------------------------*/
+
+/// @type Number [default] - Base font size
+$pxh-base-font-size:          15px !default;
+
+/// @type Number [default] - Base line height
+$pxh-base-line-height:         ($pxh-base-font-size * 4) / 3 !default;
+
+$pxh-base-spacing-scale-ratio: 1.0 !default;
+
+/// @type Number [default] - Base spacing unit
+$pxh-base-spacing-unit:        $pxh-base-font-size * $pxh-base-spacing-scale-ratio !default;
