@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>pxh-chrome 3.0.1 | pxh-drawer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <!-- build:css css/pxh-chrome.css -->
+    <link rel="stylesheet" href="css/pxh-chrome.css">
+    <!-- endbuild -->
+  </head>
+  <body class="pxh-chromeful">
+    <div class="pxh-drawer pxh-drawer--hidden-until@md pxh-drawer--narrow@md pxh-drawer--wide@lg" id="js-drawer">
+      <div class="pxh-drawer-toggle">
+        <a href="#" class="pxh-drawer-toggle__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="291 489.4 20 16" class="pxh-drawer-toggle__icon"><path d="M291 489.4v4h20v-4h-20zm0 10h20v-4h-20v4zm0 6h20v-4h-20v4z"></path></svg>
+        </a>
+      </div>
+      <h1 class="pxh-drawer-header">
+        <a href="index.html" class="pxh-drawer-header__link pxh-drawer-header__link--narrow@md pxh-drawer-header__link--wide@lg" title="Predix">
+          Predix
+        </a>
+      </h1>
+      <div class="pxh-navigation pxh-navigation--narrow@md pxh-navigation--wide@lg">
+        <ul class="pxh-navigation__list">
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Documentation">
+              <i class="fa fa-file pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Documentation</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-drawer.html" class="pxh-navigation__sub-link" title="Drawer, View &amp; View Header">
+                  <div class="pxh-navigation__sub-item-text">Drawer, View &amp; View Header</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-drawer-header-image.html" class="pxh-navigation__sub-link" title="View Header Image">
+                  <div class="pxh-navigation__sub-item-text">Drawer Header Image</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-navigation.html" class="pxh-navigation__sub-link" title="Drawer Navigation">
+                  <div class="pxh-navigation__sub-item-text">Drawer Navigation</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-badge.html" class="pxh-navigation__sub-link" title="Badges">
+                  <div class="pxh-navigation__sub-item-text">Badges</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-spinner.html" class="pxh-navigation__sub-link" title="Loading Indicator">
+                  <div class="pxh-navigation__sub-item-text">Loading Indicator</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-overlay.html" class="pxh-navigation__sub-link" title="Overlay">
+                  <div class="pxh-navigation__sub-item-text">Overlay</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-error-postchrome.html" class="pxh-navigation__sub-link" title="Error State">
+                  <div class="pxh-navigation__sub-item-text">Error State</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-resize-event.html" class="pxh-navigation__sub-link" title="Resize Event">
+                  <div class="pxh-navigation__sub-item-text">Resize Event</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Screens">
+              <i class="fa fa-dashboard pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Screens</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-chromeful.html" class="pxh-navigation__sub-link" title="Chromeful Layout">
+                  <div class="pxh-navigation__sub-item-text">Chromeful Layout</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-chromeless.html" class="pxh-navigation__sub-link" title="Chromeless Layout">
+                  <div class="pxh-navigation__sub-item-text">Chromeless Layout</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item pxh-navigation__sub-item--divider"></li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-prechrome-preauth.html" class="pxh-navigation__sub-link" title="Splash Error - w/o Auth">
+                  <div class="pxh-navigation__sub-item-text">Splash Error - w/o Auth</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-prechrome-postauth.html" class="pxh-navigation__sub-link" title="Splash Error - w/ Auth">
+                  <div class="pxh-navigation__sub-item-text">Splash Error - w/ Auth</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-postchrome.html" class="pxh-navigation__sub-link" title="Chromeful App Error">
+                  <div class="pxh-navigation__sub-item-text">App Error - Chromeful</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-chromeless.html" class="pxh-navigation__sub-link" title="Chromeless App Error">
+                  <div class="pxh-navigation__sub-item-text">App Error - Chromeless</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Component Demos">
+              <i class="fa fa-table pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Component Demos</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-drawer.html" class="pxh-navigation__sub-link" title="Drawer, View &amp; View Header"><div class="pxh-navigation__sub-item-text">Drawer, View &amp; View Header</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-drawer-header-image.html" class="pxh-navigation__sub-link" title="Drawer with Header Image"><div class="pxh-navigation__sub-item-text">Drawer with Header Image</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-navigation.html" class="pxh-navigation__sub-link" title="Drawer Navigation"><div class="pxh-navigation__sub-item-text">Drawer Navigation</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-login-signed-in.html" class="pxh-navigation__sub-link" title="Drawer Login - Signed In"><div class="pxh-navigation__sub-item-text">Drawer Login - Signed In</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-login-signed-out.html" class="pxh-navigation__sub-link" title="Drawer Login - Signed Out"><div class="pxh-navigation__sub-item-text">Drawer Login - Signed Out</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-badge.html" class="pxh-navigation__sub-link" title="Badges"><div class="pxh-navigation__sub-item-text">Badges</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-toasts.html" class="pxh-navigation__sub-link" title="Badges"><div class="pxh-navigation__sub-item-text">Toasts &amp; Notifications</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-spinner.html" class="pxh-navigation__sub-link" title="Loading Indicator"><div class="pxh-navigation__sub-item-text">Loading Indicator</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-rtl.html" class="pxh-navigation__sub-link" title="Right-to-Left Layout"><div class="pxh-navigation__sub-item-text">Right-to-Left Layout</div></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="pxh-login pxh-login--narrow@md pxh-login--wide@lg">
+        <a href="#" class="pxh-login__profile-link" title="User with an extremely long name">
+          <div class="pxh-login__avatar">
+            <img src="img/avatar.jpg" class="pxh-login__avatar-image">
+          </div>
+          <div class="pxh-login__name pxh-login__name--narrow@md pxh-login__name--wide@lg">
+            User with an extremely long name
+          </div>
+          <div class="pxh-login__caret pxh-login__caret--narrow@md pxh-login__caret--wide@lg">
+            <i class="fa fa-angle-up pxh-login__caret-icon"></i>
+          </div>
+        </a>
+        <div class="pxh-login-menu pxh-login-menu--profile">
+          <ul class="pxh-login-menu__list">
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="My Profile">My Profile</a>
+            </li>
+            <li class="pxh-login-menu__divider"></li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Sign Out">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pxh-login-menu pxh-login-menu--settings">
+          <ul class="pxh-login-menu__list">
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Settings">Settings</a>
+            </li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="About">About</a>
+            </li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Help">Help</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pxh-login__notifications pxh-login__notifications--narrow@md pxh-login__notifications--wide@lg pxh-display-none" id="js-login__notifications">
+          <a href="#" class="pxh-login__notifications-badge pxh-login__notifications-badge--red pxh-login__notifications-badge--hidden" id="js-login__notifications-badge" title="View Notifications">0</a>
+          <a href="#" class="pxh-login__notifications-link" title="View Notifications"><i class="fa fa-bell"></i></a>
+        </div>
+        <div class="pxh-login__settings pxh-login__settings--narrow@md pxh-login__settings--wide@lg">
+          <a class="pxh-login__settings-link" href="#" title="Settings"><i class="fa fa-cog"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pxh-overlay pxh-overlay--hidden pxh-overlay--hidden@lg"></div>
+        <div class="pxh-toasts pxh-toasts--narrow@md pxh-toasts--wide@lg" id="js-toasts">
+        </div>
+        <div class="pxh-notifications pxh-notifications@md pxh-notifications--narrow@md pxh-notifications--wide@lg" id="js-notifications">
+          <div class="pxh-notifications__header">
+            <div class="pxh-notifications__action">
+              <a href="#" class="pxh-notifications__link">View Log</a>
+            </div>
+            <div class="pxh-notifications__title">
+              Notifications
+            </div>
+            <div class="pxh-notifications__clear">
+              <a href="#" class="pxh-notifications__link" id="js-notifications__link--clear">Clear</a>
+            </div>
+          </div>
+          <div class="pxh-notifications__list pxh-notifications__list@md" id="js-notifications__list">
+            <div class="pxh-notifications__empty">There are no new notifications.</div>
+          </div>
+        </div>
+    <div class="pxh-view-header-drawer-toggle pxh-view-header-drawer-toggle--hidden@md">
+      <a href="#" class="pxh-view-header-drawer-toggle__link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="291 489.4 20 16" class="pxh-view-header-drawer-toggle__icon"><path d="M291 489.4v4h20v-4h-20zm0 10h20v-4h-20v4zm0 6h20v-4h-20v4z"></path></svg>
+      </a>
+    </div>
+    
+    <div class="pxh-wrapper">
+      <div class="pxh-view-header pxh-view-header--wide@md pxh-view-header--narrow@lg pxh-view-header--nudge-until@md">
+        <h1 class="pxh-view-header__title">
+          <a href="index.html" class="pxh-view-header__title-link">
+            Drawer, View &amp; View Header Documentation
+          </a>
+        </h1>
+      </div>
+      <div class="pxh-view pxh-view--wide@md pxh-view--narrow@lg" id="js-view">
+
+        <div class="pxh-docs">
+
+          <h2>pxh-drawer &mdash; <a href="demo-drawer.html">view demo</a></h2>
+
+          <h4>Show a narrow drawer at tablet widths and above</h4>
+
+          <p>To enable the persistent, narrow sidebar treatment at tablet-width breakpoints (approximately 768px) and above, locate the <code>pxh-navigation</code>-classed element and add the responsive modifier class <code>pxh-navigation--narrow@md</code> to it. This class should be hard-coded, and does not need to be toggled with Javascript.</p>
+
+          <h4>Javascript:</h4>
+
+          <p>When the user clicks <code>.pxh-drawer-toggle__link</code> or <code>.pxh-view-header-drawer-toggle__link</code>&hellip;</p>
+
+          <ul>
+            <li>Find <code>.pxh-drawer</code> and toggle the classes <code>pxh-drawer--hidden-until@md</code> and <code>pxh-drawer--narrow@md</code> on it.</li>
+          </ul>
+          
+          <h4>Sass:</h4>
+
+          <pre><code>// Set the default styles for the wide/active state of the drawer.
+  .pxh-drawer {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $pxh-drawer-width-wide;
+    height: 100%;
+    background-color: $pxh-drawer-bg-color;
+    transition: all 500ms ease-out;
+  }
+
+  // Keep the inactive drawer hidden off-screen until the @md (tablet) breakpoint.
+  @include mq($until: md) {
+    .pxh-drawer--hidden-until\@md {
+      left: ($pxh-drawer-width-wide * -1);
+    }
+  }
+
+  // From the @md (tablet) breakpoint and wider,
+  // the inactive drawer is displayed in its narrow state.
+  // Remove this class to display the drawer in its wide state.
+  @include mq($from: md) {
+    .pxh-drawer--narrow\@md {
+      width: $pxh-drawer-width-narrow;
+    }
+  }</code></pre>
+
+          <hr>
+
+          <h2>pxh-view and pxh-view-header</h2>
+
+          <h4>Changing the default background color of pxh-view</h4>
+
+          <p>By default, pxh-view is transparent and gets its background color from the background color of the HTML <code>body</code> element, which is set to a light gray color from Predix UI.</p>
+
+          <p>If you wish to override this default color, you can apply a modifier class to your pxh-view element. For example:</p>
+
+          <pre><code>&lt;section class="pxh-view <strong>pxh-view--gray7</strong> pxh-view--wide@md pxh-view--narrow@lg" id="js-view"&gt;
+    &lt;p&gt;This screen demonstrates &lt;code&gt;pxh-view&lt;/code&gt; with the &lt;code&gt;pxh-view--gray7&lt;/code&gt; modifier class applied to it, which changes its default background color.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+          
+          All monochromatic colors from Predix UI are supported, including black and white. <a href="demo-drawer.html">View the drawer demo page</a> for a list of all options, and links to examples.</p>
+
+          <hr>
+
+          <h4>Accounting for the "hamburger" drawer toggle menu at the mobile breakpoint</h4>
+
+          <p>By default, <code>pxh-view-header</code> assumes the styles for your microapp's view header content will account for the extra space needed to display the "hamburger" drawer toggle menu at the mobile breakpoint. If you would rather that pxh-chrome handles this spacing automatically, add the responsive modifier class <code>pxh-view-header--nudge-until@md</code> to your <code>pxh-view-header</code> element markup like so:</p>
+
+          <pre><code>&lt;section class="pxh-wrapper"&gt;
+  &lt;header class="pxh-view-header pxh-view-header--wide@md pxh-view-header--narrow@lg <strong>pxh-view-header--nudge-until@md</strong>"&gt;
+    &lt;h1 class="pxh-view-header__title"&gt;
+      &lt;a href="index.html" class="pxh-view-header__title-link"&gt;
+        View Header Nudge Demo
+      &lt;/a&gt;
+    &lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;section class="pxh-view pxh-view--wide@md pxh-view--narrow@lg" id="js-view"&gt;
+    &hellip;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+
+          <p>This class will automatically include the extra left spacing for the drawer toggle menu at the mobile breakpoint and below, but remove it at all higher breakpoints.</p>
+
+          <p>Typically we prefer that the mobile breakpoint is simply defined by our application's default non-responsive styles, and we layer additional styles on top of it to achieve the desired look-and-feel at wider breakpoints. By targeting <em>lower</em> rather than <em>higher</em> breakpoints the <code>--until@md</code> responsive modifier class clearly doesn't follow this best practice, but we find it to be an allowable exception in this case.</p>
+
+          <h4>Javascript:</h4>
+
+          <p>When the user clicks <code>.pxh-drawer-toggle__link</code> or <code>.pxh-view-header-drawer-toggle__link</code>&hellip;</p>
+
+          <ul>
+            <li>Find <code>.pxh-view</code> and toggle the class <code>pxh-view--narrow@lg</code> on it</li>
+            <li>Find <code>.pxh-view-header</code> and toggle the class <code>pxh-view-header--narrow@lg</code> on it</li>
+            <li>Find <code>.pxh-view-header-drawer-toggle</code> and toggle the classes <code>pxh-view-header-drawer-toggle--hidden@md and pxh-view-header-drawer-toggle--hidden</code> on it</li>
+          </ul>
+
+          <h4>Sass:</h4>
+
+          <pre><code>// From the @md (tablet) breakpoint and wider,
+  // the view is displayed in its wide state, which accounts
+  // for the width of the narrow state of the drawer on the left.
+  @include mq($from: md) {
+    .pxh-view--wide\@md {
+      margin-left: $pxh-drawer-width-narrow;
+    }
+  }
+
+  // From the @lg (desktop) breakpoint and wider,
+  // add this class to display the view in its narrow state,
+  // which acccounts for the width of the wide state of the drawer.
+  @include mq($from: lg) {
+    .pxh-view--narrow\@lg {
+      margin-left: $pxh-drawer-width-wide;
+    }
+  }
+
+  // From the @md (tablet) breakpoint and wider,
+  // the view header is displayed in its wide state, which accounts
+  // for the width of the narrow state of the drawer on the left.
+  @include mq($from: md) {
+    .pxh-view-header--wide\@md {
+      left: $pxh-drawer-width-narrow;
+    }
+  }
+
+  // From the @lg (desktop) breakpoint and wider,
+  // add this class to display the view header in its narrow state,
+  // which accounts for the width of the wide state of the drawer.
+  @include mq($from: lg) {
+    .pxh-view-header--narrow\@lg {
+      left: $pxh-drawer-width-wide;
+    }
+  }
+
+  // Hide the toggle button in the view-header. This class is
+  // used even though the drawer covers the view-header toggle
+  // button, because sometimes click events on the drawer toggle
+  // are intercepted by the view-header toggle as well, resulting
+  // in a bounce scenario.
+  .pxh-view-header-drawer-toggle--hidden {
+    left: $pxh-drawer-width-narrow * -1;
+    opacity: 0;  
+  }
+
+  // From the @md (tablet) breakpoint and wider, hide the
+  // toggle button in the view-header, as the toggle in the
+  // narrow left drawer is persistently displayed instead.
+  @include mq($from: md) {
+    .pxh-view-header-drawer-toggle--hidden\@md {
+        left: $pxh-drawer-width-narrow * -1;
+        opacity: 0;
+    }
+  }</code></pre>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js js/pxh-chrome.js -->
+    <script src="js/pxh-chrome.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>pxh-chrome 3.0.1 | Drawer Header Image</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <!-- build:css css/pxh-chrome.css -->
+    <link rel="stylesheet" href="css/pxh-chrome.css">
+    <!-- endbuild -->
+  </head>
+  <body class="pxh-chromeful">
+    <div class="pxh-drawer pxh-drawer--hidden-until@md pxh-drawer--narrow@md pxh-drawer--wide@lg" id="js-drawer">
+      <div class="pxh-drawer-toggle">
+        <a href="#" class="pxh-drawer-toggle__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="291 489.4 20 16" class="pxh-drawer-toggle__icon"><path d="M291 489.4v4h20v-4h-20zm0 10h20v-4h-20v4zm0 6h20v-4h-20v4z"></path></svg>
+        </a>
+      </div>
+      <h1 class="pxh-drawer-header">
+        <a href="index.html" class="pxh-drawer-header__link pxh-drawer-header__link--narrow@md pxh-drawer-header__link--wide@lg" title="Predix">
+          Predix
+        </a>
+      </h1>
+      <div class="pxh-navigation pxh-navigation--narrow@md pxh-navigation--wide@lg">
+        <ul class="pxh-navigation__list">
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Documentation">
+              <i class="fa fa-file pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Documentation</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-drawer.html" class="pxh-navigation__sub-link" title="Drawer, View &amp; View Header">
+                  <div class="pxh-navigation__sub-item-text">Drawer, View &amp; View Header</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-drawer-header-image.html" class="pxh-navigation__sub-link" title="View Header Image">
+                  <div class="pxh-navigation__sub-item-text">Drawer Header Image</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-navigation.html" class="pxh-navigation__sub-link" title="Drawer Navigation">
+                  <div class="pxh-navigation__sub-item-text">Drawer Navigation</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-badge.html" class="pxh-navigation__sub-link" title="Badges">
+                  <div class="pxh-navigation__sub-item-text">Badges</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-spinner.html" class="pxh-navigation__sub-link" title="Loading Indicator">
+                  <div class="pxh-navigation__sub-item-text">Loading Indicator</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-overlay.html" class="pxh-navigation__sub-link" title="Overlay">
+                  <div class="pxh-navigation__sub-item-text">Overlay</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-error-postchrome.html" class="pxh-navigation__sub-link" title="Error State">
+                  <div class="pxh-navigation__sub-item-text">Error State</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-resize-event.html" class="pxh-navigation__sub-link" title="Resize Event">
+                  <div class="pxh-navigation__sub-item-text">Resize Event</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Screens">
+              <i class="fa fa-dashboard pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Screens</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-chromeful.html" class="pxh-navigation__sub-link" title="Chromeful Layout">
+                  <div class="pxh-navigation__sub-item-text">Chromeful Layout</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-chromeless.html" class="pxh-navigation__sub-link" title="Chromeless Layout">
+                  <div class="pxh-navigation__sub-item-text">Chromeless Layout</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item pxh-navigation__sub-item--divider"></li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-prechrome-preauth.html" class="pxh-navigation__sub-link" title="Splash Error - w/o Auth">
+                  <div class="pxh-navigation__sub-item-text">Splash Error - w/o Auth</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-prechrome-postauth.html" class="pxh-navigation__sub-link" title="Splash Error - w/ Auth">
+                  <div class="pxh-navigation__sub-item-text">Splash Error - w/ Auth</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-postchrome.html" class="pxh-navigation__sub-link" title="Chromeful App Error">
+                  <div class="pxh-navigation__sub-item-text">App Error - Chromeful</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-chromeless.html" class="pxh-navigation__sub-link" title="Chromeless App Error">
+                  <div class="pxh-navigation__sub-item-text">App Error - Chromeless</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Component Demos">
+              <i class="fa fa-table pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Component Demos</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-drawer.html" class="pxh-navigation__sub-link" title="Drawer, View &amp; View Header"><div class="pxh-navigation__sub-item-text">Drawer, View &amp; View Header</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-drawer-header-image.html" class="pxh-navigation__sub-link" title="Drawer with Header Image"><div class="pxh-navigation__sub-item-text">Drawer with Header Image</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-navigation.html" class="pxh-navigation__sub-link" title="Drawer Navigation"><div class="pxh-navigation__sub-item-text">Drawer Navigation</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-login-signed-in.html" class="pxh-navigation__sub-link" title="Drawer Login - Signed In"><div class="pxh-navigation__sub-item-text">Drawer Login - Signed In</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-login-signed-out.html" class="pxh-navigation__sub-link" title="Drawer Login - Signed Out"><div class="pxh-navigation__sub-item-text">Drawer Login - Signed Out</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-badge.html" class="pxh-navigation__sub-link" title="Badges"><div class="pxh-navigation__sub-item-text">Badges</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-toasts.html" class="pxh-navigation__sub-link" title="Badges"><div class="pxh-navigation__sub-item-text">Toasts &amp; Notifications</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-spinner.html" class="pxh-navigation__sub-link" title="Loading Indicator"><div class="pxh-navigation__sub-item-text">Loading Indicator</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-rtl.html" class="pxh-navigation__sub-link" title="Right-to-Left Layout"><div class="pxh-navigation__sub-item-text">Right-to-Left Layout</div></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="pxh-login pxh-login--narrow@md pxh-login--wide@lg">
+        <a href="#" class="pxh-login__profile-link" title="User with an extremely long name">
+          <div class="pxh-login__avatar">
+            <img src="img/avatar.jpg" class="pxh-login__avatar-image">
+          </div>
+          <div class="pxh-login__name pxh-login__name--narrow@md pxh-login__name--wide@lg">
+            User with an extremely long name
+          </div>
+          <div class="pxh-login__caret pxh-login__caret--narrow@md pxh-login__caret--wide@lg">
+            <i class="fa fa-angle-up pxh-login__caret-icon"></i>
+          </div>
+        </a>
+        <div class="pxh-login-menu pxh-login-menu--profile">
+          <ul class="pxh-login-menu__list">
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="My Profile">My Profile</a>
+            </li>
+            <li class="pxh-login-menu__divider"></li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Sign Out">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pxh-login-menu pxh-login-menu--settings">
+          <ul class="pxh-login-menu__list">
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Settings">Settings</a>
+            </li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="About">About</a>
+            </li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Help">Help</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pxh-login__notifications pxh-login__notifications--narrow@md pxh-login__notifications--wide@lg pxh-display-none" id="js-login__notifications">
+          <a href="#" class="pxh-login__notifications-badge pxh-login__notifications-badge--red pxh-login__notifications-badge--hidden" id="js-login__notifications-badge" title="View Notifications">0</a>
+          <a href="#" class="pxh-login__notifications-link" title="View Notifications"><i class="fa fa-bell"></i></a>
+        </div>
+        <div class="pxh-login__settings pxh-login__settings--narrow@md pxh-login__settings--wide@lg">
+          <a class="pxh-login__settings-link" href="#" title="Settings"><i class="fa fa-cog"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pxh-overlay pxh-overlay--hidden pxh-overlay--hidden@lg"></div>
+        <div class="pxh-toasts pxh-toasts--narrow@md pxh-toasts--wide@lg" id="js-toasts">
+        </div>
+        <div class="pxh-notifications pxh-notifications@md pxh-notifications--narrow@md pxh-notifications--wide@lg" id="js-notifications">
+          <div class="pxh-notifications__header">
+            <div class="pxh-notifications__action">
+              <a href="#" class="pxh-notifications__link">View Log</a>
+            </div>
+            <div class="pxh-notifications__title">
+              Notifications
+            </div>
+            <div class="pxh-notifications__clear">
+              <a href="#" class="pxh-notifications__link" id="js-notifications__link--clear">Clear</a>
+            </div>
+          </div>
+          <div class="pxh-notifications__list pxh-notifications__list@md" id="js-notifications__list">
+            <div class="pxh-notifications__empty">There are no new notifications.</div>
+          </div>
+        </div>
+    <div class="pxh-view-header-drawer-toggle pxh-view-header-drawer-toggle--hidden@md">
+      <a href="#" class="pxh-view-header-drawer-toggle__link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="291 489.4 20 16" class="pxh-view-header-drawer-toggle__icon"><path d="M291 489.4v4h20v-4h-20zm0 10h20v-4h-20v4zm0 6h20v-4h-20v4z"></path></svg>
+      </a>
+    </div>
+    
+    <div class="pxh-wrapper">
+      <div class="pxh-view-header pxh-view-header--wide@md pxh-view-header--narrow@lg pxh-view-header--nudge-until@md">
+        <h1 class="pxh-view-header__title">
+          <a href="index.html" class="pxh-view-header__title-link">
+            Drawer Header Image
+          </a>
+        </h1>
+      </div>
+      <div class="pxh-view pxh-view--wide@md pxh-view--narrow@lg" id="js-view">
+        <div class="pxh-docs">
+          <h2>pxh-drawer-header--image &mdash; <a href="demo-drawer-header-image.html">view demo</a></h2>
+
+          <p>By default, pxh-chrome displays the title of your application in the drawer header area. If you wish to display a company logo or other image in this space, you are free to do so with a few small changes.</p>
+
+          <p>The drawer header area provides a 60px x 200px space for including a logo. We strongly recommend you use a PNG image with a 24-bit transparent background, at a resolution at least twice as large as 60px x 200px to accomodate retina displays. pxh-chrome will proportionally scale the image you include, and using a 120px x 400px image, for example, will ensure your logo still looks crisp on a display with 2x pixel density.</p>
+
+          <p>The iPhone 6 Plus and iPhone 7 Plus have 3x pixel density displays, so to ensure the highest compatibility of your designs with future devices we highly recommend you use an image that is at least 180px x 600px.</p>
+
+          <p>pxh-chrome will preserve the aspect ratio of any image that it scales to fit into the drawer header area. If an image doesn't match the 60x200 aspect ratio, it will be scaled proportionally so that the entire image fits the available space, and will be centered vertically and fully aligned to the left. In right-to-left layouts, the image will be fully aligned to the right.</p>
+
+          <h3>Adding your own logo to pxh-chrome</h3>
+
+          <p><em>Note: Adding and updating the image in the drawer header of pxh-chrome is currently in beta. These instructions will undoubtedly change as we improve the customization hooks in pxh-chrome.</em></p>
+
+          <ul>
+            <li>Create and save your logo image in PNG format on a 24-bit alpha transparent background, with the filename <code>logo.png</code></li>
+            <li>Replace the <code>logo.png</code> file in the <code>/public/img</code> folder of pxh-chrome with your own logo</li>
+            <li>Update your drawer template (in your HTML if you're using pxh-chrome by itself; in <code>views/main.handlebars</code> if you're using pxh-chrome with the App Hub) to tell it to use your image:
+              <ul>
+                <li>Find <code>&lt;h1 class="pxh-drawer-header"&gt;</code> and change it to <code>&lt;h1 class="pxh-drawer-header pxh-drawer-header--image"&gt;</code></li>
+                <li>Find <code>&lt;a href="#" class="pxh-drawer-header__link pxh-drawer-header__link--narrow@md pxh-drawer-header__link--wide@lg" title="{{appname}}"&gt;</code> and change it to <code>&lt;a href="#" class="pxh-drawer-header__link pxh-drawer-header__link--image pxh-drawer-header__link--narrow@md pxh-drawer-header__link--wide@lg" title="{{appname}}"&gt;</code></li>
+              </ul>
+            </li>
+            <li>To put it plainly, you're adding the <code>pxh-drawer-header--image</code> and <code>pxh-drawer-header__link--image</code> classes to their corresponding elements, telling them to show an image instead of showing the application name</li>
+          </ul>
+
+          <p><em>If you're using the App Hub, the easiest way to repoint the CSS to your image is to put it somewhere accessible (e.g. in your App Hub filesystem or on a CDN) and add these lines to the <code>&lt;head&gt;</code> of your <code>main.handlebars</code> file:</p>
+            <pre><code>&lt;style type="text/css"&gt;
+  .pxh-drawer-header__link--image {
+    background-image: url('RELATIVE_OR_ABSOLUTE_PATH_TO_YOUR/logo.png') !important;
+  }
+&lt;style&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js js/pxh-chrome.js -->
+    <script src="js/pxh-chrome.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

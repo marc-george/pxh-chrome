@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>pxh-chrome 3.0.1 | Drawer Login Demo - Logged In</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <!-- build:css css/pxh-chrome.css -->
+    <link rel="stylesheet" href="css/pxh-chrome.css">
+    <!-- endbuild -->
+  </head>
+  <body class="pxh-chromeful">
+    <div class="pxh-drawer pxh-drawer--hidden-until@md pxh-drawer--narrow@md pxh-drawer--wide@lg" id="js-drawer">
+      <div class="pxh-drawer-toggle">
+        <a href="#" class="pxh-drawer-toggle__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="291 489.4 20 16" class="pxh-drawer-toggle__icon"><path d="M291 489.4v4h20v-4h-20zm0 10h20v-4h-20v4zm0 6h20v-4h-20v4z"></path></svg>
+        </a>
+      </div>
+      <h1 class="pxh-drawer-header">
+        <a href="index.html" class="pxh-drawer-header__link pxh-drawer-header__link--narrow@md pxh-drawer-header__link--wide@lg" title="Predix">
+          Predix
+        </a>
+      </h1>
+      <div class="pxh-login pxh-login--narrow@md pxh-login--wide@lg">
+        <a href="#" class="pxh-login__profile-link" title="User with an extremely long name">
+          <div class="pxh-login__avatar">
+            <img src="img/avatar.jpg" class="pxh-login__avatar-image">
+          </div>
+          <div class="pxh-login__name pxh-login__name--narrow@md pxh-login__name--wide@lg">
+            User with an extremely long name
+          </div>
+          <div class="pxh-login__caret pxh-login__caret--narrow@md pxh-login__caret--wide@lg">
+            <i class="fa fa-angle-up pxh-login__caret-icon"></i>
+          </div>
+        </a>
+        <div class="pxh-login-menu pxh-login-menu--profile">
+          <ul class="pxh-login-menu__list">
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="My Profile">My Profile</a>
+            </li>
+            <li class="pxh-login-menu__divider"></li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Sign Out">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pxh-login-menu pxh-login-menu--settings">
+          <ul class="pxh-login-menu__list">
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Settings">Settings</a>
+            </li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="About">About</a>
+            </li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Help">Help</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pxh-login__notifications pxh-login__notifications--narrow@md pxh-login__notifications--wide@lg pxh-display-none" id="js-login__notifications">
+          <a href="#" class="pxh-login__notifications-badge pxh-login__notifications-badge--red pxh-login__notifications-badge--hidden" id="js-login__notifications-badge" title="View Notifications">0</a>
+          <a href="#" class="pxh-login__notifications-link" title="View Notifications"><i class="fa fa-bell"></i></a>
+        </div>
+        <div class="pxh-login__settings pxh-login__settings--narrow@md pxh-login__settings--wide@lg">
+          <a class="pxh-login__settings-link" href="#" title="Settings"><i class="fa fa-cog"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pxh-overlay pxh-overlay--hidden pxh-overlay--hidden@lg"></div>
+        <div class="pxh-toasts pxh-toasts--narrow@md pxh-toasts--wide@lg" id="js-toasts">
+        </div>
+        <div class="pxh-notifications pxh-notifications@md pxh-notifications--narrow@md pxh-notifications--wide@lg" id="js-notifications">
+          <div class="pxh-notifications__header">
+            <div class="pxh-notifications__action">
+              <a href="#" class="pxh-notifications__link">View Log</a>
+            </div>
+            <div class="pxh-notifications__title">
+              Notifications
+            </div>
+            <div class="pxh-notifications__clear">
+              <a href="#" class="pxh-notifications__link" id="js-notifications__link--clear">Clear</a>
+            </div>
+          </div>
+          <div class="pxh-notifications__list pxh-notifications__list@md" id="js-notifications__list">
+            <div class="pxh-notifications__empty">There are no new notifications.</div>
+          </div>
+        </div>
+    <div class="pxh-view-header-drawer-toggle pxh-view-header-drawer-toggle--hidden@md">
+      <a href="#" class="pxh-view-header-drawer-toggle__link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="291 489.4 20 16" class="pxh-view-header-drawer-toggle__icon"><path d="M291 489.4v4h20v-4h-20zm0 10h20v-4h-20v4zm0 6h20v-4h-20v4z"></path></svg>
+      </a>
+    </div>
+    
+    <div class="pxh-wrapper">
+      <div class="pxh-view-header pxh-view-header--wide@md pxh-view-header--narrow@lg pxh-view-header--nudge-until@md">
+        <h1 class="pxh-view-header__title">
+          <a href="index.html" class="pxh-view-header__title-link">
+            Drawer Login Demo - Signed In
+          </a>
+        </h1>
+      </div>
+      <div class="pxh-view pxh-view--wide@md pxh-view--narrow@lg" id="js-view">
+        <div class="pxh-docs">
+          <p>This screen demonstrates...</p>
+
+          <h1>pxh-login</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js js/pxh-chrome.js -->
+    <script src="js/pxh-chrome.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

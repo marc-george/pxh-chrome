@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>pxh-chrome 3.0.1 | Loading Indicator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <!-- build:css css/pxh-chrome.css -->
+    <link rel="stylesheet" href="css/pxh-chrome.css">
+    <!-- endbuild -->
+  </head>
+  <body class="pxh-chromeful">
+    <div class="pxh-drawer pxh-drawer--hidden-until@md pxh-drawer--narrow@md pxh-drawer--wide@lg" id="js-drawer">
+      <div class="pxh-drawer-toggle">
+        <a href="#" class="pxh-drawer-toggle__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="291 489.4 20 16" class="pxh-drawer-toggle__icon"><path d="M291 489.4v4h20v-4h-20zm0 10h20v-4h-20v4zm0 6h20v-4h-20v4z"></path></svg>
+        </a>
+      </div>
+      <h1 class="pxh-drawer-header">
+        <a href="index.html" class="pxh-drawer-header__link pxh-drawer-header__link--narrow@md pxh-drawer-header__link--wide@lg" title="Predix">
+          Predix
+        </a>
+      </h1>
+      <div class="pxh-navigation pxh-navigation--narrow@md pxh-navigation--wide@lg">
+        <ul class="pxh-navigation__list">
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Documentation">
+              <i class="fa fa-file pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Documentation</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-drawer.html" class="pxh-navigation__sub-link" title="Drawer, View &amp; View Header">
+                  <div class="pxh-navigation__sub-item-text">Drawer, View &amp; View Header</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-drawer-header-image.html" class="pxh-navigation__sub-link" title="View Header Image">
+                  <div class="pxh-navigation__sub-item-text">Drawer Header Image</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-navigation.html" class="pxh-navigation__sub-link" title="Drawer Navigation">
+                  <div class="pxh-navigation__sub-item-text">Drawer Navigation</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-badge.html" class="pxh-navigation__sub-link" title="Badges">
+                  <div class="pxh-navigation__sub-item-text">Badges</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-spinner.html" class="pxh-navigation__sub-link" title="Loading Indicator">
+                  <div class="pxh-navigation__sub-item-text">Loading Indicator</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-overlay.html" class="pxh-navigation__sub-link" title="Overlay">
+                  <div class="pxh-navigation__sub-item-text">Overlay</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-error-postchrome.html" class="pxh-navigation__sub-link" title="Error State">
+                  <div class="pxh-navigation__sub-item-text">Error State</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="docs-resize-event.html" class="pxh-navigation__sub-link" title="Resize Event">
+                  <div class="pxh-navigation__sub-item-text">Resize Event</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Screens">
+              <i class="fa fa-dashboard pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Screens</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-chromeful.html" class="pxh-navigation__sub-link" title="Chromeful Layout">
+                  <div class="pxh-navigation__sub-item-text">Chromeful Layout</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-chromeless.html" class="pxh-navigation__sub-link" title="Chromeless Layout">
+                  <div class="pxh-navigation__sub-item-text">Chromeless Layout</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item pxh-navigation__sub-item--divider"></li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-prechrome-preauth.html" class="pxh-navigation__sub-link" title="Splash Error - w/o Auth">
+                  <div class="pxh-navigation__sub-item-text">Splash Error - w/o Auth</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-prechrome-postauth.html" class="pxh-navigation__sub-link" title="Splash Error - w/ Auth">
+                  <div class="pxh-navigation__sub-item-text">Splash Error - w/ Auth</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-postchrome.html" class="pxh-navigation__sub-link" title="Chromeful App Error">
+                  <div class="pxh-navigation__sub-item-text">App Error - Chromeful</div>
+                </a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="error-chromeless.html" class="pxh-navigation__sub-link" title="Chromeless App Error">
+                  <div class="pxh-navigation__sub-item-text">App Error - Chromeless</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="pxh-navigation__item">
+            <a href="index.html" class="pxh-navigation__link" title="Component Demos">
+              <i class="fa fa-table pxh-navigation__item-icon"></i>
+              <div class="pxh-navigation__item-text">Component Demos</div>
+            </a>
+            <ul class="pxh-navigation__sub-list">
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-drawer.html" class="pxh-navigation__sub-link" title="Drawer, View &amp; View Header"><div class="pxh-navigation__sub-item-text">Drawer, View &amp; View Header</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-drawer-header-image.html" class="pxh-navigation__sub-link" title="Drawer with Header Image"><div class="pxh-navigation__sub-item-text">Drawer with Header Image</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-navigation.html" class="pxh-navigation__sub-link" title="Drawer Navigation"><div class="pxh-navigation__sub-item-text">Drawer Navigation</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-login-signed-in.html" class="pxh-navigation__sub-link" title="Drawer Login - Signed In"><div class="pxh-navigation__sub-item-text">Drawer Login - Signed In</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-login-signed-out.html" class="pxh-navigation__sub-link" title="Drawer Login - Signed Out"><div class="pxh-navigation__sub-item-text">Drawer Login - Signed Out</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-badge.html" class="pxh-navigation__sub-link" title="Badges"><div class="pxh-navigation__sub-item-text">Badges</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-toasts.html" class="pxh-navigation__sub-link" title="Badges"><div class="pxh-navigation__sub-item-text">Toasts &amp; Notifications</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-spinner.html" class="pxh-navigation__sub-link" title="Loading Indicator"><div class="pxh-navigation__sub-item-text">Loading Indicator</div></a>
+              </li>
+              <li class="pxh-navigation__sub-item">
+                <a href="demo-rtl.html" class="pxh-navigation__sub-link" title="Right-to-Left Layout"><div class="pxh-navigation__sub-item-text">Right-to-Left Layout</div></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="pxh-login pxh-login--narrow@md pxh-login--wide@lg">
+        <a href="#" class="pxh-login__profile-link" title="User with an extremely long name">
+          <div class="pxh-login__avatar">
+            <img src="img/avatar.jpg" class="pxh-login__avatar-image">
+          </div>
+          <div class="pxh-login__name pxh-login__name--narrow@md pxh-login__name--wide@lg">
+            User with an extremely long name
+          </div>
+          <div class="pxh-login__caret pxh-login__caret--narrow@md pxh-login__caret--wide@lg">
+            <i class="fa fa-angle-up pxh-login__caret-icon"></i>
+          </div>
+        </a>
+        <div class="pxh-login-menu pxh-login-menu--profile">
+          <ul class="pxh-login-menu__list">
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="My Profile">My Profile</a>
+            </li>
+            <li class="pxh-login-menu__divider"></li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Sign Out">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pxh-login-menu pxh-login-menu--settings">
+          <ul class="pxh-login-menu__list">
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Settings">Settings</a>
+            </li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="About">About</a>
+            </li>
+            <li class="pxh-login-menu__item">
+              <a class="pxh-login-menu__link" href="#" title="Help">Help</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pxh-login__notifications pxh-login__notifications--narrow@md pxh-login__notifications--wide@lg pxh-display-none" id="js-login__notifications">
+          <a href="#" class="pxh-login__notifications-badge pxh-login__notifications-badge--red pxh-login__notifications-badge--hidden" id="js-login__notifications-badge" title="View Notifications">0</a>
+          <a href="#" class="pxh-login__notifications-link" title="View Notifications"><i class="fa fa-bell"></i></a>
+        </div>
+        <div class="pxh-login__settings pxh-login__settings--narrow@md pxh-login__settings--wide@lg">
+          <a class="pxh-login__settings-link" href="#" title="Settings"><i class="fa fa-cog"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pxh-overlay pxh-overlay--hidden pxh-overlay--hidden@lg"></div>
+        <div class="pxh-toasts pxh-toasts--narrow@md pxh-toasts--wide@lg" id="js-toasts">
+        </div>
+        <div class="pxh-notifications pxh-notifications@md pxh-notifications--narrow@md pxh-notifications--wide@lg" id="js-notifications">
+          <div class="pxh-notifications__header">
+            <div class="pxh-notifications__action">
+              <a href="#" class="pxh-notifications__link">View Log</a>
+            </div>
+            <div class="pxh-notifications__title">
+              Notifications
+            </div>
+            <div class="pxh-notifications__clear">
+              <a href="#" class="pxh-notifications__link" id="js-notifications__link--clear">Clear</a>
+            </div>
+          </div>
+          <div class="pxh-notifications__list pxh-notifications__list@md" id="js-notifications__list">
+            <div class="pxh-notifications__empty">There are no new notifications.</div>
+          </div>
+        </div>
+    <div class="pxh-view-header-drawer-toggle pxh-view-header-drawer-toggle--hidden@md">
+      <a href="#" class="pxh-view-header-drawer-toggle__link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="291 489.4 20 16" class="pxh-view-header-drawer-toggle__icon"><path d="M291 489.4v4h20v-4h-20zm0 10h20v-4h-20v4zm0 6h20v-4h-20v4z"></path></svg>
+      </a>
+    </div>
+    
+    <div class="pxh-wrapper">
+      <div class="pxh-view-header pxh-view-header--wide@md pxh-view-header--narrow@lg pxh-view-header--nudge-until@md">
+        <h1 class="pxh-view-header__title">
+          <a href="index.html" class="pxh-view-header__title-link">
+            Loading Indicator
+          </a>
+        </h1>
+      </div>
+      <div class="pxh-view pxh-view--wide@md pxh-view--narrow@lg" id="js-view">
+        <div class="pxh-docs">
+          <h1>Progress &amp; Activity</h1>
+
+          <p>A progress indicator provides a visual indicator that the application is loading content. The type of indicator is dependent on the type of content and how long the operation will take. The placement and size of the indicator will be determined by the content area and the type of process. </p>
+
+<!--           <h3>Indeterminate</h3>
+          <p>An indeterminate indicator visualizes an unspecified amount of time that the user must wait for their content to be loaded. An indeterminate indicator ask that the user wait while the loading process finishes when it’s not known how long the process will take.</p>
+
+          <h3>Determinate</h3>
+          <p>A determinate indicator will display how long a process will take. A determinate indicator can be complemented with a percentage loaded or a number of values loaded.</p> -->
+
+          <h2>pxh-spinner (circular loader) &mdash; <a href="demo-spinner.html">view demo</a></h2>
+          
+          A circular loader is best used to indicate to the user that a single loading process is taking place. A circular loader will generally center within the content area or loading process.
+
+          <h3>Usage</h3>
+
+          <pre><code>&lt;div class="pxh-spinner"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner"></div>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--margin"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--margin"></div>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--no-margin"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--no-margin"></div>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--small"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--small"></div>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--large"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--large"></div>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--finished"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--finished"></div>
+
+          <p>&nbsp;</p>
+
+          <p><em>The <code>pxh-spinner--finished</code> modifier class completely hides the spinner and all its spacing. This is helpful if you want to hide the spinner but keep its element in the DOM.</em></p>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--inverted"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--inverted"></div>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--small pxh-spinner--inverted"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--small pxh-spinner--inverted"></div>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--large pxh-spinner--inverted"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--large pxh-spinner--inverted"></div>
+
+          <hr>
+
+          <pre><code>&lt;div class="pxh-spinner pxh-spinner--large pxh-spinner--inverted pxh-spinner--finished"&gt;&lt;/div&gt;</code></pre>
+
+          <div class="pxh-spinner pxh-spinner--large pxh-spinner--inverted pxh-spinner--finished"></div>
+
+          <p>&nbsp;</p>   
+<!-- 
+          <h2>Linear Loader</h2>
+          <p>A linear loader is best used when integrating a loading indicator within a component or the area requires a loader to horizontally fit within an area.</p>
+
+          <h2>Ellipsis Loader</h2>
+          <p>An ellipsis loader is best used when loading multiple objects within a view or the content area limits the size of an indicator. The subtle nature of the ellipsis allows the indicator to provide enough context that a loading process is active while not visually disturbing other areas of the interface.</p>
+
+          <h2>Preview Loader</h2>
+          <p>A preview loader is best used when loading multiple unique objects. A preview loader can also be used to provide context for an empty area that is loading content.</p>
+
+          <h2>Micro App / Page Loading</h2>
+          <p>Loading a Micro App requires the user to wait for an indeterminate amount of time while the main content of the application loads. It is best to use a circular loader to provide a strong visual indicator that the Micro App is in the process of loading. The circular loader is centered within the content area of the Micro App.</p>
+
+          <h2>Microservice Loading</h2>
+          <p>Since Micro-Services are loaded independently, numerous indeterminate loaders can appear within a Micro App at any given time. It is best to use the ellipsis loaders because it provides a subtle loading indicator while not visually distracting from other services that have been loaded.</p>
+
+          <h2>Widget Loading</h2>
+          <p>Widgets are loaded independently within a card and will have an unspecified amount of time it will take for the widget to load. Widgets will load a animated preview image. Loading a preview image provides context of the visualization while filling in areas of the application that would be empty. </p>
+
+          <h2>Progressive Loading</h2>
+          <p>When a data set is too large to load as a single instance, progressively loading the content is necessary. Arriving at the end of a data set will load the next data set. Providing a loading state will inform the user they must wait till the next data set will load. It is best to place the loading state in the area where the next data set will appear.</p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js js/pxh-chrome.js -->
+    <script src="js/pxh-chrome.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
